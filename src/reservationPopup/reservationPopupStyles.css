@@ -74,11 +74,12 @@
 
 .img-label {
     margin-bottom: 0;
-    font-size: 19px;
-    font-weight: bold;
-    border: 2px solid;
+    font-size: 25px;
+    font-weight: 500;
+    /* border: 1px solid #d9d9b2; */
     padding: 6px;
-    border-radius: 48%;
+    border-radius: 30px;
+    box-shadow: rgba(178, 176, 112, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .show {
@@ -102,7 +103,7 @@
 }
 
 .reserve {
-    background-color: #18ab28;
+    background-color: #d9d9b2;
     border: none;
     width: 90px;
     height: 30px;
@@ -114,14 +115,18 @@
 
 .reserve:hover {
     background: transparent;
-    border: 2px solid #18ab28;
-    box-shadow: 0 0 10px 0 #18ab28 inset, 0 0 10px 4px #18ab28;
-    color: #04500d;
+    border: 2px solid #d9d9b2;
+    box-shadow: 0 0 10px 0 #d9d9b2 inset, 0 0 10px 4px #d9d9b2;
+    color: #bdbd93;
 }
 
 input { 
     height: 30px;
     align-self: start;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 15px;
 }
 
 .reservation {
