@@ -1,4 +1,4 @@
-import './style.css';
+//import './style.css';
 
 const showsArray = [
   {
@@ -57,4 +57,34 @@ const showsArray = [
 
 ];
 
-console.log(showsArray);
+function createShowCard(obj){
+    const div = document.createElement('div');
+    div.classList.add('show-card');
+    div.innerHTML = `<div class="img-placeholder">
+    <img
+      src= ${obj.image.medium}
+      alt="The show's poster image"
+    />
+  </div>
+  <div class="show-info">
+    <h2 class="show-title">${obj.name}</h2>
+    <div>
+      Genres
+      <ul>
+        ${obj.genres.map(genre =>`<li>${genre}</li>`).join('')}
+      </ul>
+    </div>
+    <p>Rating: <span>${obj.rating.average}</span></p>
+    ${obj.summary}
+  </div>
+  <div>
+    <button>Comments</button>
+    <button>Reservations</button>
+  </div>`;
+
+  return div;
+}
+
+
+const showsSection = document.querySelector('.shows-section');
+showsSection.append(createShowCard(showsArray[0]));
