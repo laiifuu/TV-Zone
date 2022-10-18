@@ -16,7 +16,7 @@
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://tv-zone/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./images/once-upon-a-time.jpg */ \"./src/images/once-upon-a-time.jpg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"/* Box sizing rules */\\r\\n\\r\\n:root {\\r\\n  --orange: #ff8906;\\r\\n  --black: #0f0e17;\\r\\n  --grey: #a7a9be;\\r\\n  --pink: #e53170;\\r\\n  --form-input: #0f0e17;\\r\\n  --paragraph: #2e2f3e;\\r\\n  --card-headline: #fffffe;\\r\\n\\r\\n  --fs-200: 14px;\\r\\n  --fs-300: 16px;\\r\\n  --fs-400: 18px;\\r\\n  --fs-500: 20px;\\r\\n  --fs-600: 24px;\\r\\n  --fs-700: 30px;\\r\\n  --fs-800: 36px;\\r\\n}\\r\\n\\r\\n*,\\r\\n*::before,\\r\\n*::after {\\r\\n  box-sizing: border-box;\\r\\n\\r\\n /* border: 1px solid blueviolet;*/\\r\\n}\\r\\n\\r\\n/* Remove default margin */\\r\\n\\r\\nbody,\\r\\nh1,\\r\\nh2,\\r\\nh3,\\r\\nh4,\\r\\np,\\r\\nfigure,\\r\\nblockquote,\\r\\ndl,\\r\\ndd {\\r\\n  margin: 0;\\r\\n}\\r\\n\\r\\nul, ol {\\r\\n  list-style: none;\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n}\\r\\n\\r\\nhtml{\\r\\n  scroll-behavior: smooth;\\r\\n}\\r\\n\\r\\nbody {\\r\\n  min-height: 100vh;\\r\\n  text-rendering: optimizeSpeed;\\r\\n  line-height: 1.5;\\r\\n  font-family: \\\"Poppins\\\", sans-serif;\\r\\n  color: var(--card-headline);\\r\\n  background-color: var( --black);\\r\\n  height: 100vh;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  justify-content: space-between;\\r\\n}\\r\\n\\r\\n/* A elements that don't have a class get default styles */\\r\\n\\r\\na:not([class]) {\\r\\n  color: var(--pink);\\r\\n}\\r\\n\\r\\n\\r\\n/* Make images easier to work with */\\r\\n\\r\\nimg,\\r\\npicture {\\r\\n  max-width: 100%;\\r\\n  display: block;\\r\\n}\\r\\n\\r\\n/* Inherit fonts for inputs and buttons */\\r\\n\\r\\ninput,\\r\\nbutton,\\r\\ntextarea,\\r\\nselect {\\r\\n  font: inherit;\\r\\n}\\r\\n\\r\\n/* header styling */\\r\\n\\r\\nheader {\\r\\n  position: absolute;\\r\\n  top: 20px;\\r\\n  left: 20px;\\r\\n  right: 20px;\\r\\n}\\r\\n\\r\\nnav{\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n}\\r\\n\\r\\n.nav-list {\\r\\n  display: none;\\r\\n}\\r\\n\\r\\n.burger-menu {\\r\\n  width: 40px;\\r\\n  height: 30px;\\r\\n  padding: 0;\\r\\n  color: var(--card-headline);\\r\\n  background-color: transparent;\\r\\n}\\r\\n\\r\\n.line {\\r\\n  width: 40px;\\r\\n  height: 6px;\\r\\n  color: var(--card-headline);\\r\\n  background-color: var(--card-headline);\\r\\n  transition: all 0.3s ease-in-out;\\r\\n}\\r\\n\\r\\n.line1 {\\r\\n  transform: translateY(-6px);\\r\\n}\\r\\n\\r\\n.line3 {\\r\\n  transform: translateY(6px);\\r\\n}\\r\\n\\r\\n.nav-link{\\r\\n  padding: 15px;\\r\\n}\\r\\n\\r\\nmain{\\r\\n  height: 100vh;\\r\\n  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),\\r\\n    url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n  background-repeat: no-repeat;\\r\\n  background-size: cover;\\r\\n  padding: 20px;\\r\\n}\\r\\n\\r\\n.headline {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  justify-content: center;\\r\\n  align-items: flex-start;\\r\\n  height: 100vh;\\r\\n  gap: 20px;\\r\\n}\\r\\n\\r\\n.shows-section {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  align-items: center;\\r\\n  gap: 20px;\\r\\n  margin-top: 40px;\\r\\n}\\r\\n\\r\\n.shows{\\r\\n  display: flex;\\r\\n  flex-wrap: wrap;\\r\\n  gap: 40px;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n  padding: 20px;\\r\\n}\\r\\n\\r\\n.show-card {\\r\\n  position: relative;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  gap: 10px;\\r\\n  width: 100%;\\r\\n  height: auto ;\\r\\n}\\r\\n\\r\\n.interactions-section{\\r\\n  height: 100%;\\r\\n  width: 100%;\\r\\n  position: absolute;\\r\\n  bottom: 0;\\r\\n  left: 0;\\r\\n  right: 0;\\r\\n  z-index: 2;\\r\\n  display: flex;\\r\\n  justify-content: space-between;\\r\\n  align-items: flex-end;\\r\\n  background-image: linear-gradient(transparent, rgba(0, 0, 0, 1));\\r\\n}\\r\\n\\r\\nbutton {\\r\\n  padding: 15px;\\r\\n  border: none;\\r\\n  background-color: var(--orange);\\r\\n  color: var(--card-headline);\\r\\n  cursor: pointer;\\r\\n}\\r\\n\\r\\n.info-btns > button {\\r\\n  background-color: transparent;\\r\\n}\\r\\n\\r\\n.like-btn {\\r\\n  background-color: transparent;\\r\\n  color: var(--pink);\\r\\n  width: 48px;\\r\\n}\\r\\n\\r\\n.page-control{\\r\\n  background-color: transparent;\\r\\n  color: var(--orange);\\r\\n  text-decoration: underline;\\r\\n  font-weight: 600;\\r\\n}\\r\\n\\r\\nfooter {\\r\\n  margin-top: 50px;\\r\\n  display: flex;\\r\\n  flex-wrap: wrap;\\r\\n  gap: 20px;\\r\\n  padding: 30px;\\r\\n}\\r\\n\\r\\nfooter > ul{\\r\\n  display: flex;\\r\\n  gap:10px;\\r\\n}\\r\\n\\r\\n.hidden {\\r\\n  display: none;\\r\\n}\\r\\n\\r\\n@media screen and (min-width: 768px){\\r\\n  h1 {\\r\\n    font-size: 48px;\\r\\n  }\\r\\n  \\r\\n  h2 {\\r\\n    font-size: 36px;\\r\\n  }\\r\\n  \\r\\n  nav{\\r\\n    justify-content: flex-end;\\r\\n  }\\r\\n  \\r\\n  .burger-menu {\\r\\n    display: none;\\r\\n  }\\r\\n\\r\\n  .nav-list {\\r\\n    display: flex;\\r\\n    gap: 20px;\\r\\n    font-weight: 600;\\r\\n    justify-content: flex-end;\\r\\n  }\\r\\n\\r\\n  .nav-link {\\r\\n    text-decoration: none;\\r\\n    color: var(--card-headline);\\r\\n  }\\r\\n\\r\\n  main{\\r\\n    padding-left: 100px;\\r\\n  }\\r\\n\\r\\n  .shows {\\r\\n    gap: 10px;\\r\\n    align-items: stretch;\\r\\n  }\\r\\n\\r\\n  .show-card {\\r\\n    width: 20%;\\r\\n  }\\r\\n\\r\\n  .img-placeholder > img{\\r\\n    height: auto;\\r\\n  }\\r\\n\\r\\n  .info-btns > button {\\r\\n    padding: 15px 5px 15px 5px;\\r\\n  }\\r\\n  \\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://tv-zone/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -28,6 +28,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://tv-zone/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://tv-zone/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -119,13 +130,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/dummyData.js":
-/*!**************************!*\
-  !*** ./src/dummyData.js ***!
-  \**************************/
+/***/ "./src/homepage/display.js":
+/*!*********************************!*\
+  !*** ./src/homepage/display.js ***!
+  \*********************************/
 /***/ (() => {
 
-eval("const showsArray = [\r\n    {\r\n      id: 1,\r\n      name: 'Under the Dome',\r\n      genres: [\r\n        'Drama',\r\n        'Science-Fiction',\r\n        'Thriller',\r\n      ],\r\n      rating: {\r\n        average: 6.5,\r\n      },\r\n      image: {\r\n        medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg',\r\n        original: 'https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg',\r\n      },\r\n      summary: \"<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>\",\r\n    },\r\n  \r\n    {\r\n      id: 2,\r\n      name: 'Person of Interest',\r\n      genres: [\r\n        'Action',\r\n        'Crime',\r\n        'Science-Fiction',\r\n      ],\r\n      rating: {\r\n        average: 8.8,\r\n      },\r\n      image: {\r\n        medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/163/407679.jpg',\r\n        original: 'https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg',\r\n      },\r\n      summary: \"<p>You are being watched. The government has a secret system, a machine that spies on you every hour of every day. I know because I built it. I designed the Machine to detect acts of terror but it sees everything. Violent crimes involving ordinary people. People like you. Crimes the government considered 'irrelevant'. They wouldn't act so I decided I would. But I needed a partner. Someone with the skills to intervene. Hunted by the authorities, we work in secret. You'll never find us. But victim or perpetrator, if your number is up, we'll find you.</p>\",\r\n    },\r\n  \r\n    {\r\n      id: 4,\r\n      name: 'Arrow',\r\n      genres: [\r\n        'Drama',\r\n        'Action',\r\n        'Science-Fiction',\r\n      ],\r\n      rating: {\r\n        average: 7.4,\r\n      },\r\n      image: {\r\n        medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/213/534017.jpg',\r\n        original: 'https://static.tvmaze.com/uploads/images/original_untouched/213/534017.jpg',\r\n      },\r\n      summary: '<p>After a violent shipwreck, billionaire playboy Oliver Queen was missing and presumed dead for five years before being discovered alive on a remote island in the Pacific. He returned home to Starling City, welcomed by his devoted mother Moira, beloved sister Thea and former flame Laurel Lance. With the aid of his trusted chauffeur/bodyguard John Diggle, the computer-hacking skills of Felicity Smoak and the occasional, reluctant assistance of former police detective, now beat cop, Quentin Lance, Oliver has been waging a one-man war on crime.</p>',\r\n    },\r\n  \r\n  ];\r\n  \r\n  function createShowCard(obj){\r\n      const div = document.createElement('div');\r\n      div.classList.add('show-card');\r\n      div.innerHTML = `<div class=\"img-placeholder\">\r\n      <img\r\n        src= ${obj.image.medium}\r\n        alt=\"The show's poster image\"\r\n      />\r\n    </div>\r\n    <div class=\"show-info\">\r\n      <h2 class=\"show-title\">${obj.name}</h2>\r\n      <div>\r\n        Genres\r\n        <ul>\r\n          ${obj.genres.map(genre =>`<li>${genre}</li>`).join('')}\r\n        </ul>\r\n      </div>\r\n      <p>Rating: <span>${obj.rating.average}</span></p>\r\n      ${obj.summary}\r\n    </div>\r\n    <div>\r\n      <button>Comments</button>\r\n      <button>Reservations</button>\r\n    </div>`;\r\n  \r\n    return div;\r\n  }\r\n  \r\n  \r\n  const showsSection = document.querySelector('.shows-section');\r\n  showsSection.append(createShowCard(showsArray[0]));\r\n  showsSection.append(createShowCard(showsArray[1]));\r\n  \n\n//# sourceURL=webpack://tv-zone/./src/dummyData.js?");
+eval("const url = \"https://api.tvmaze.com/shows\";\r\n\r\nconst showsDiv = document.querySelector('.shows');\r\nconst previous = document.querySelector('.previous');\r\nconst next = document.querySelector('.next');\r\nconst pageNum = document.querySelector('.page-number');\r\nconst main = document.querySelector('main');\r\n\r\nconst getShowsData = async (url) => {\r\n  const result = await fetch(url);\r\n  return result;\r\n};\r\n\r\nfunction createShowCard(obj){\r\n    const div = document.createElement('div');\r\n    div.classList.add('show-card');\r\n    div.innerHTML = `\r\n    <div class=\"img-placeholder\">\r\n    <img src=\"${obj.image.original}\" alt=\"${obj.name} poster\">\r\n    </div>\r\n    <div class=\"interactions-section\">\r\n      <div class=\"info-btns\">\r\n        <button>Reservations</button>\r\n        <button>Comments</button>\r\n      </div>\r\n        <button class=\"like-btn\"><i class=\"fa-regular fa-heart\" ></i></button>\r\n    </div>\r\n  `;\r\n\r\n  return div;\r\n}\r\n\r\nfunction loadNext(pageNumber){\r\n  if(pageNumber+1 < 25){\r\n    pageNum.innerHTML = pageNumber + 1;\r\n    showsDiv.innerHTML = \"\";\r\n    getShowsData(url)\r\n    .then(response => response.json())\r\n    .then(json => displayShows(json, pageNumber+1));\r\n  }\r\n}\r\n\r\nfunction loadPrevious(pageNumber){\r\n  if(pageNumber-1>0){\r\n    pageNum.innerHTML = pageNumber - 1;\r\n    showsDiv.innerHTML = \"\";\r\n    getShowsData(url)\r\n    .then(response => response.json())\r\n    .then(json => displayShows(json, pageNumber-1));\r\n  }\r\n}\r\n\r\nconst displayShows = (shows, pageNumber) => {\r\n  console.log(pageNumber*10-10, 10);\r\n    shows.splice(pageNumber*10-10, 10).forEach(show => {\r\n        const div = createShowCard(show);\r\n        showsDiv.append(div);\r\n    });\r\n}\r\n\r\nprevious.addEventListener('click', () => {\r\n  loadPrevious(parseInt(pageNum.innerHTML, 10));\r\n}\r\n);\r\n\r\nnext.addEventListener('click', () => {\r\n  console.log('next');\r\n  loadNext(parseInt(pageNum.innerHTML, 10));\r\n}\r\n);\r\n\r\ngetShowsData(url)\r\n.then(response => response.json())\r\n.then(json => displayShows(json, 1));\n\n//# sourceURL=webpack://tv-zone/./src/homepage/display.js?");
 
 /***/ }),
 
@@ -136,7 +147,18 @@ eval("const showsArray = [\r\n    {\r\n      id: 1,\r\n      name: 'Under the Do
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _dummyData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dummyData.js */ \"./src/dummyData.js\");\n/* harmony import */ var _dummyData_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dummyData_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://tv-zone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _homepage_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage/display.js */ \"./src/homepage/display.js\");\n/* harmony import */ var _homepage_display_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_homepage_display_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n//import './dummyData.js';\r\n\n\n//# sourceURL=webpack://tv-zone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/images/once-upon-a-time.jpg":
+/*!*****************************************!*\
+  !*** ./src/images/once-upon-a-time.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"250530bda7c93e2ea835.jpg\";\n\n//# sourceURL=webpack://tv-zone/./src/images/once-upon-a-time.jpg?");
 
 /***/ })
 
@@ -166,6 +188,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -191,6 +216,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +242,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
