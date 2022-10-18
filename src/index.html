@@ -6,20 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" defer></script>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="https://kit.fontawesome.com/9b54de88d2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9b54de88d2.js"
+      crossorigin="anonymous"
+    ></script>
     <title>TV Zone</title>
   </head>
 
   <body>
     <header>
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>Tv Shows</li>
-          <li>Contact</li>
+        <button type="button" class="burger-menu" data-toggled="false">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </button>
+        <ul class="nav-list hidden">
+          <li class=".nav-link">Home</li>
+          <li class=".nav-link">Tv Shows</li>
+          <li class=".nav-link">Contact</li>
         </ul>
       </nav>
     </header>
+    <main>
+      <div class="headline">
+        <h1>Welcome to TV Zone</h1>
+        <p>
+          Where you can find all the information about your favourite series
+        </p>
+        <button>Start browsing</button>
+      </div>
+    </main>
     <section class="shows-section">
     </section>
     <footer class="flex">
