@@ -22,24 +22,31 @@
           <div class="line line3"></div>
         </button>
         <ul class="nav-list hidden">
-          <li class=".nav-link">Home</li>
-          <li class=".nav-link">Tv Shows</li>
-          <li class=".nav-link">Contact</li>
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="#shows-section">Tv Shows</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="headline">
         <h1>Welcome to TV Zone</h1>
-        <p>
+        <h3>
           Where you can find all the information about your favourite series
-        </p>
+        </h3>
         <button>Start browsing</button>
       </div>
     </main>
-    <section class="shows-section">
+    <section id="shows-section" class="shows-section">
+      <h2>Shows</h2>
+      <div class="shows"></div>
+      <div class="shows-controls">
+        <button class="page-control previous">Previous</button>
+        <span class="page-number">1</span>
+        <button class="page-control next">Next</button>
+      </div>
     </section>
-    <footer class="flex">
+    <footer id="contact">
       <p>Created by:</p>
       <ul>
         <li>
