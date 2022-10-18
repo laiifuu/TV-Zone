@@ -1,3 +1,3 @@
 import './style.css';
-//import './dummyData.js';
-import './homepage/display.js'
+// import './dummyData.js';
+import './homepage/display.js';

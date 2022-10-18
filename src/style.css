@@ -8,7 +8,6 @@
   --form-input: #0f0e17;
   --paragraph: #2e2f3e;
   --card-headline: #fffffe;
-
   --fs-200: 14px;
   --fs-300: 16px;
   --fs-400: 18px;
@@ -23,7 +22,7 @@
 *::after {
   box-sizing: border-box;
 
- /* border: 1px solid blueviolet;*/
+  /* border: 1px solid blueviolet; */
 }
 
 /* Remove default margin */
@@ -41,13 +40,14 @@ dd {
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -57,7 +57,7 @@ body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   color: var(--card-headline);
-  background-color: var( --black);
+  background-color: var(--black);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ header {
   right: 20px;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
 }
@@ -130,13 +130,14 @@ nav{
   transform: translateY(6px);
 }
 
-.nav-link{
+.nav-link {
   padding: 15px;
 }
 
-main{
+main {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./images/once-upon-a-time.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -160,7 +161,7 @@ main{
   margin-top: 40px;
 }
 
-.shows{
+.shows {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -175,10 +176,10 @@ main{
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  height: auto ;
+  height: auto;
 }
 
-.interactions-section{
+.interactions-section {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -210,7 +211,7 @@ button {
   width: 48px;
 }
 
-.page-control{
+.page-control {
   background-color: transparent;
   color: var(--orange);
   text-decoration: underline;
@@ -225,28 +226,28 @@ footer {
   padding: 30px;
 }
 
-footer > ul{
+footer > ul {
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
 
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 48px;
   }
-  
+
   h2 {
     font-size: 36px;
   }
-  
-  nav{
+
+  nav {
     justify-content: flex-end;
   }
-  
+
   .burger-menu {
     display: none;
   }
@@ -263,7 +264,7 @@ footer > ul{
     color: var(--card-headline);
   }
 
-  main{
+  main {
     padding-left: 100px;
   }
 
@@ -276,12 +277,11 @@ footer > ul{
     width: 20%;
   }
 
-  .img-placeholder > img{
+  .img-placeholder > img {
     height: auto;
   }
 
   .info-btns > button {
     padding: 15px 5px 15px 5px;
   }
-  
 }
