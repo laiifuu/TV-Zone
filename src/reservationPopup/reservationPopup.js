@@ -1,29 +1,32 @@
-import "./reservationPopupStyles.css";
+import './reservationPopupStyles.css';
 
-const showsSection = document.querySelector(".shows-section");
+const showsSection = document.querySelector('.shows-section');
 
 const reservationPopup = (obj) => {
-  const Popup = document.createElement("div");
-  Popup.classList.add("popup");
-  Popup.innerHTML = `<div class="popup-container">
-  <i class="close-icon" onclick="closePopup()">X</i>
-  <img src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg" alt="" class="img">
-  <p class="img-label">Movie Name</p>
-  <div class="show-details">
-      <ul class="details-grid">
-          <li>detail 1</li>
-          <li>detail 2</li>
-          <li>detail 3</li>
-          <li>detail 4</li>
-      </ul>
+  const Popup = document.createElement('div');
+  Popup.classList.add('popup');
+  Popup.innerHTML = `<div class='popup-container'>
+  <i class='close-icon fa-regular fa-circle-xmark'  onClick='closePopup()'></i>
+  <div class='show'>
+  <img src=${obj.image.medium} alt='Show Image' class='img'>
+  <div class='show-details'>
+    <p class='img-label'>${obj.name}</p>
+    <ul class='details-grid'>
+        <li class='genres-title'>Genres<hr class='border'/></li>
+        ${obj.genres.map((genre) => `<li class='genre-item'>${genre}</li>`).join('')}
+    </ul>
   </div>
-  <div class="reservation-list">
   </div>
-  <div class="reservation-form">
-      <input type="text" placeholder="your name">
-      <input type="text" placeholder="start date">
-      <input type="text" placeholder="end date">
-      <button class="reserve">Reserve</button>
+  <div class='reservation'>
+    <div class='reservation-form'>
+        <input type='text' placeholder='your name' class='name-input'>
+        <input type='text' placeholder='start date' class='startdate-input'>
+        <input type='text' placeholder='end date' class='enddate-input'>
+        <button class='reserve'>Reserve</button>
+    </div>
+    <div class='reservation-list'>
+      <p class='reservation-list-title'>Reservation List<hr /></p>
+    </div>
   </div>
 </div>`;
 
@@ -35,6 +38,6 @@ window.openPopup = (obj) => {
 };
 
 window.closePopup = () => {
-  const popup = document.querySelector(".popup");
+  const popup = document.querySelector('.popup');
   showsSection.removeChild(popup);
 };

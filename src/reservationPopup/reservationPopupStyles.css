@@ -15,29 +15,32 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 8px;
     background-color: #fefefe;
     width: 35%;
     position: relative;
     margin: auto;
-    padding: 15px;
+    padding: 11px;
     border: 1px solid #888;
     border-radius: 8px;
     animation-name: animitop;
-    animation-duration: 0.6s;
-    max-height: calc(100vh - 68px);
+    animation-duration: 0.9s;
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
+    gap: 10px;
+    padding-bottom: 0;
 }
 
 .img {
-    height: 300px;
-    width: 200px;
+    height: 280px;
+    width: 180px;
+    border-radius: 20px;
 }
 
 .reservation-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
 }
 
 .close-icon {
@@ -47,8 +50,110 @@
 
 .details-grid{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     list-style: none;
     column-gap: 12px;
     padding: 0;
 }
+
+.genres-title{
+    grid-column: 1/4;
+    text-align: start;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.genre-item {
+    background-color: #d9d9b2;
+    padding: 0 6px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.img-label {
+    margin-bottom: 0;
+    font-size: 19px;
+    font-weight: bold;
+    border: 2px solid;
+    padding: 6px;
+    border-radius: 48%;
+}
+
+.show {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border {
+    grid-column: 1/4;
+    background-color: rgb(160, 64, 64);
+    height: 1px;
+    width: 45px;
+    margin: 0;    
+}
+
+.reserve {
+    background-color: #18ab28;
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.reserve:hover {
+    background: transparent;
+    border: 2px solid #18ab28;
+    box-shadow: 0 0 10px 0 #18ab28 inset, 0 0 10px 4px #18ab28;
+    color: #04500d;
+}
+
+input { 
+    height: 30px;
+    align-self: start;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation-list {
+    position: relative;
+    top: -55px;
+    height: 280px;
+    width: 180px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.reservation-list-title {
+    text-align: center;
+}
+
+@keyframes animitop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
