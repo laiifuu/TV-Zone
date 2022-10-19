@@ -1,26 +1,65 @@
-/* popup comment - start */
 .popup-comment {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transition: 0.3s ease-in-out;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
-  z-index: 20;
-  background-color: white;
-  width: 800px;
-  max-width: 80%;
-  padding: 15px;
+  z-index: 10;
+  padding-top: 27px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* .popup-comment.active {
-    transform: translate(-50%, -50%) scale(1);
-  } */
+.image-popup {
+  height: 280px;
+  width: 180px;
+  border-radius: 20px;
+  box-shadow:
+    rgba(0, 0, 0, 0.09) 0 3px 2px,
+    rgba(0, 0, 0, 0.09) 0 6px 3px,
+    rgba(0, 0, 0, 0.09) 0 12px 6px,
+    rgba(0, 0, 0, 0.09) 0 16px 8px,
+    rgba(0, 0, 0, 0.09) 0 32px 16px;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.show-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #fefefe;
+  width: 70%;
+  position: relative;
+  margin: auto;
+  padding: 11px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  animation-name: animitop;
+  animation-duration: 0.9s;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  gap: 10px;
+  padding-bottom: 0;
+}
 
 .close-button {
-  text-align: right;
+  align-self: flex-end;
   font-size: 30px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #comment-overlay {
@@ -35,9 +74,137 @@
   pointer-events: none;
 }
 
-/* #comment-overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  } */
+.comments-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
-/* popup comment - end */
+.close-icon {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style: none;
+  column-gap: 12px;
+  padding: 0;
+}
+
+.genres-title {
+  grid-column: 1/4;
+  text-align: start;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.genre-item {
+  background-color: #d9d9b2;
+  padding: 0 6px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.img-label {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 500;
+
+  /* border: 1px solid #d9d9b2; */
+  padding: 6px;
+  border-radius: 30px;
+  box-shadow: rgba(178, 176, 112, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+}
+
+.border {
+  grid-column: 1/4;
+  background-color: rgb(160, 64, 64);
+  height: 1px;
+  width: 45px;
+  margin: 0;
+}
+
+.comment-button {
+  background-color: #d9d9b2;
+  border: none;
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.reserve:hover {
+  background: transparent;
+  border: 2px solid #d9d9b2;
+  box-shadow: 0 0 10px 0 #d9d9b2 inset, 0 0 10px 4px #d9d9b2;
+  color: #bdbd93;
+}
+
+.name-input {
+  min-width: 190px;
+  width: 190px;
+  height: 30px;
+  align-self: start;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+  border: none;
+  padding: 0 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form-textarea {
+  min-width: 190px;
+  width: 190px;
+  padding: 0 10px;
+  border-radius: 15px;
+  border: none;
+  height: 170px;
+  font-size: 15px;
+  font-weight: 400;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-list {
+  position: relative;
+  top: -55px;
+  min-height: 280px;
+  max-height: 280px;
+  width: 180px;
+  overflow: scroll;
+  border: 1px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
+}
+
+.comments-list-title {
+  text-align: center;
+}
+
+@keyframes animitop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

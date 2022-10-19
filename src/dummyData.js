@@ -1,4 +1,4 @@
-export const showsArray = [
+const showsArray = [
   {
     id: 1,
     name: 'Under the Dome',
@@ -75,8 +75,8 @@ function createShowCard(arr) {
     </div>
     <div>
       <button id=${obj.id} onclick='openModal(${
-      obj.id
-    })' class="btn-comment">Comments</button>
+  obj.id
+})' class="btn-comment">Comments</button>
       <button>Reservations</button>
     </div>`;
     showsSection.append(div);
@@ -84,3 +84,5 @@ function createShowCard(arr) {
   return showsSection;
 }
 createShowCard(showsArray);
+
+export default showsArray;
