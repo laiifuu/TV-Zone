@@ -19,6 +19,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /*border: solid 1px pink;*/
 }
 
 body,
@@ -167,6 +168,7 @@ main {
 .interactions-section {
   height: 100%;
   width: 100%;
+  padding: 5px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -186,16 +188,17 @@ button {
   cursor: pointer;
 }
 
-.info-btns > button {
-  background-color: transparent;
-}
-
 .like-btn {
   background-color: transparent;
   color: var(--pink);
   width: 48px;
 }
 
+.info-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .page-control {
   background-color: transparent;
   color: var(--orange);
@@ -267,6 +270,7 @@ footer > ul {
   }
 
   .info-btns > button {
-    padding: 15px 5px 15px 5px;
+    padding: 5px;
   }
+  
 }
