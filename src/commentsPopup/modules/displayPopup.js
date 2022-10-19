@@ -1,8 +1,22 @@
 import { getCommentsData } from './commentsApi.js';
 
+export const renderComments = (id, comments) => {
+  getCommentsData(id)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(comments);
+      comments.innerHTML = '';
+      data.forEach((comment) => {
+        const newComment = document.createElement('li');
+        newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
+            class="comment-text">${comment.comment}</span>`;
+        comments.appendChild(newComment);
+      });
+    })
+    .catch((error) => error);
+};
+
 const renderPopup = (obj) => {
-  // const comments = getCommentsData(obj.id);
-  // console.log(comments);
   const popupCommentWindow = document.createElement('div');
   popupCommentWindow.classList.add('popup-comment');
   popupCommentWindow.innerHTML = `<div class="popup-container">
@@ -31,22 +45,23 @@ const renderPopup = (obj) => {
   closeBtn.addEventListener('click', () => {
     popupCommentWindow.remove();
   });
-  const commentButton = popupCommentWindow.querySelector('.comment-button');
-  const comments = popupCommentWindow.querySelector('.comments-ul');
-  getCommentsData(obj.id)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      data.map((comment) => {
-        comments.innerHTML = '';
-        data.forEach((comment) => {
-          const newComment = document.createElement('li');
-          newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
-            class="comment-text">${comment.comment}</span>`;
-          comments.appendChild(newComment);
-        });
-      });
-    });
+
+  // const commentButton = popupCommentWindow.querySelector('.comment-button');
+  // const comments = popupCommentWindow.querySelector('.comments-ul');
+  // getCommentsData(obj.id)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log(data);
+  //     data.map((comment) => {
+  //       comments.innerHTML = '';
+  //       data.forEach((comment) => {
+  //         const newComment = document.createElement('li');
+  //         newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
+  //           class="comment-text">${comment.comment}</span>`;
+  //         comments.appendChild(newComment);
+  //       });
+  //     });
+  //   });
 
   return popupCommentWindow;
 };
