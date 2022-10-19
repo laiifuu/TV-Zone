@@ -1,9 +1,8 @@
-import "../reservationPopupStyles.css";
-
+import '../reservationPopupStyles.css';
 
 const reservationPopup = (obj) => {
-  const Popup = document.createElement("div");
-  Popup.classList.add("popup");
+  const Popup = document.createElement('div');
+  Popup.classList.add('popup');
   Popup.innerHTML = `
   <div class='popup-container'>
   <img src=${obj.image.original} alt='Show Image' class='bg-img'>
@@ -15,8 +14,8 @@ const reservationPopup = (obj) => {
       <ul class='details-grid'>
           <li class='details-section'>Genres<hr class='border'/></li>
           ${obj.genres
-            .map((genre) => `<li class='genre-item'>${genre}</li>`)
-            .join("")}
+    .map((genre) => `<li class='genre-item'>${genre}</li>`)
+    .join('')}
             <li class='details-section'>Rating:   <span>${obj.rating.average}</span><hr class='border'/></li>
             <li class='details-section'>Summary:   <hr class='border'/><span class='summary'>${obj.summary}</span></li>
       </ul>
