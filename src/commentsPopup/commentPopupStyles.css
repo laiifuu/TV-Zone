@@ -14,11 +14,8 @@
   height: 280px;
   width: 180px;
   border-radius: 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.09) 0 3px 2px,
-    rgba(0, 0, 0, 0.09) 0 6px 3px,
-    rgba(0, 0, 0, 0.09) 0 12px 6px,
-    rgba(0, 0, 0, 0.09) 0 16px 8px,
+  box-shadow: rgba(0, 0, 0, 0.09) 0 3px 2px, rgba(0, 0, 0, 0.09) 0 6px 3px,
+    rgba(0, 0, 0, 0.09) 0 12px 6px, rgba(0, 0, 0, 0.09) 0 16px 8px,
     rgba(0, 0, 0, 0.09) 0 32px 16px;
 }
 
@@ -187,7 +184,7 @@
   min-height: 280px;
   max-height: 280px;
   width: 180px;
-  overflow: scroll;
+  overflow: auto;
   border: 1px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
