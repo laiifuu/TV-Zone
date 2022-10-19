@@ -16,7 +16,7 @@ const showsArray = [
         'https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg',
     },
     summary:
-      '<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The towns inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>',
+      "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
   },
 
   {
@@ -33,11 +33,11 @@ const showsArray = [
         'https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg',
     },
     summary:
-      "<p>You are being watched. The government has a secret system, a machine that spies on you every hour of every day. I know because I built it. I designed the Machine to detect acts of terror but it sees everything. Violent crimes involving ordinary people. People like you. Crimes the government considered 'irrelevant'. They wouldn't act so I decided I would. But I needed a partner. Someone with the skills to intervene. Hunted by the authorities, we work in secret. Youll never find us. But victim or perpetrator, if your number is up, well find you.</p>",
+      "<p>You are being watched. The government has a secret system, a machine that spies on you every hour of every day. I know because I built it. I designed the Machine to detect acts of terror but it sees everything. Violent crimes involving ordinary people. People like you. Crimes the government considered 'irrelevant'. They wouldn't act so I decided I would. But I needed a partner. Someone with the skills to intervene. Hunted by the authorities, we work in secret. You'll never find us. But victim or perpetrator, if your number is up, we'll find you.</p>",
   },
 
   {
-    id: 4,
+    id: 3,
     name: 'Arrow',
     genres: ['Drama', 'Action', 'Science-Fiction'],
     rating: {
@@ -90,3 +90,5 @@ function createShowCard(obj) {
 const showsSection = document.querySelector('.shows-section');
 showsSection.append(createShowCard(showsArray[0]));
 showsSection.append(createShowCard(showsArray[1]));
+
+export default showsArray;
