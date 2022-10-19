@@ -1,92 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script
+      src="https://kit.fontawesome.com/9b54de88d2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TV Zone</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="index.js" defer></script>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <script src="https://kit.fontawesome.com/7e86c8c237.js" crossorigin="anonymous"></script>
-  <title>TV Zone</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Tv Shows</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  </header>
-  <section class="shows-section">
-    <!-- <div class="show-card">
-        <div class="img-placeholder">
-          <img
-            src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"
-            alt=""
-          />
-        </div>
-        <div class="show-info">
-          <h2 class="show-title">Under the Dome</h2>
-          <div>
-            Genres
-            <ul>
-              <li>Drama</li>
-              <li>Science-fiction</li>
-              <li>Thriller</li>
-            </ul>
-          </div>
-          <p>Rating: <span>6.5</span></p>
-          <p class="show-summary">
-            <b>Under the Dome</b> is the story of a small town that is suddenly
-            and inexplicably sealed off from the rest of the world by an
-            enormous transparent dome. The town's inhabitants must deal with
-            surviving the post-apocalyptic conditions while searching for
-            answers about the dome, where it came from and if and when it will
-            go away.
-          </p>
-        </div>
-        <div>
-          <button>Comments</button>
-          <button>Reservations</button>
-        </div>
-      </div> -->
-  </section>
-
-  <!-- popup comment -->
-  <!-- <div class="popup-comment" id="popup-comment">
-    <div class="popup-header">
-      <div data-close-button class="close-button">&times;</div>
-      <div class="img-comment"><img src="" alt=""></div>
-    </div>
-    <div class="popup-body">
-      <div class="popup-title">Person of Interest</div>
-      <div class="show-info">
-        <ul class="genre-comment">
-          <li></li>
+  <body>
+    <header>
+      <nav>
+        <button type="button" class="burger-menu" data-toggled="false">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </button>
+        <ul class="nav-list hidden">
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="#shows-section">Tv Shows</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <p>Ratings: <span></span></p>
+      </nav>
+    </header>
+    <main>
+      <div class="headline">
+        <h1>Welcome to TV Zone</h1>
+        <h3>
+          Where you can find all the information about your favourite series
+        </h3>
+        <button type="button">Start browsing</button>
       </div>
-    </div>
-  </div> -->
-  <!-- <div id="comment-overlay"></div> -->
-  <footer class="flex">
-    <p>Created by:</p>
-    <ul>
-      <li>
-        <a href="https://github.com/laiifuu">Hayet Fellah</a>
-      </li>
-      <li>
-        <a href="https://github.com/Zuhaib042">Zuhaib Amjad</a>
-      </li>
-      <li>
-        <a href="https://github.com/KareemWilson">Kareem Wilson</a>
-      </li>
-    </ul>
-  </footer>
-</body>
-
+    </main>
+    <section id="shows-section" class="shows-section">
+      <h2>Shows</h2>
+      <div class="shows"></div>
+      <div class="shows-controls">
+        <button type="button" class="page-control previous">Previous</button>
+        <span class="page-number">1</span>
+        <button type="button" class="page-control next">Next</button>
+      </div>
+    </section>
+    <footer id="contact">
+      <p>Created by:</p>
+      <ul>
+        <li>
+          <a href="https://github.com/laiifuu">Hayet Fellah</a>
+        </li>
+        <li>
+          <a href="https://github.com/Zuhaib042">Zuhaib Amjad</a>
+        </li>
+        <li>
+          <a href="https://github.com/KareemWilson">Kareem Wilson</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
+
