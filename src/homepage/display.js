@@ -1,4 +1,8 @@
 import renderPopup from '../commentsPopup/modules/displayPopup.js';
+import {
+  getCommentsData,
+  postCommentData,
+} from '../commentsPopup/modules/commentsApi.js';
 
 const url = 'https://api.tvmaze.com/shows';
 const showsDiv = document.querySelector('.shows');
@@ -30,7 +34,16 @@ function createShowCard(obj) {
   const commentsBtn = div.querySelector('.comments');
   commentsBtn.addEventListener('click', () => {
     const popup = renderPopup(obj);
+    getCommentsData(obj.id);
     body.append(popup);
+    const form = document.querySelector('.comments-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const userName = document.querySelector('.name-input').value;
+      const textArea = document.querySelector('.form-textarea').value;
+      postCommentData(userName, textArea, obj.id);
+      form.reset();
+    });
   });
   return div;
 }
