@@ -30,7 +30,7 @@ function createShowCard(obj) {
   `;
 
   const commentsBtn = div.querySelector('.comments');
-  commentsBtn.addEventListener('click', ()=>{
+  commentsBtn.addEventListener('click', () => {
     const popup = renderPopup(obj);
     body.append(popup);
   });
