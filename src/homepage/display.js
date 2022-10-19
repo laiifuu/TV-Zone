@@ -35,12 +35,12 @@ function createShowCard(obj) {
     </div>
   `;
   const likesNumber = div.querySelector('.likes-number');
-  if ("likes" in obj){
+  if ('likes' in obj) {
     likesNumber.innerHTML = obj.likes;
   }
 
   const commentsBtn = div.querySelector('.comments');
-  commentsBtn.addEventListener('click', ()=>{
+  commentsBtn.addEventListener('click', () => {
     const popup = renderPopup(obj);
     body.append(popup);
   });
@@ -56,7 +56,7 @@ const displayShows = (shows, pageNumber) => {
 };
 
 function loadNext(pageNumber, shows) {
-  let nextPage = pageNumber + 1;
+  const nextPage = pageNumber + 1;
   if (nextPage < 25) {
     pageNum.innerHTML = nextPage;
     showsDiv.innerHTML = '';
@@ -65,7 +65,7 @@ function loadNext(pageNumber, shows) {
 }
 
 function loadPrevious(pageNumber, shows) {
-  let previousPage = pageNumber - 1;
+  const previousPage = pageNumber - 1;
   if (previousPage > 0) {
     pageNum.innerHTML = previous;
     showsDiv.innerHTML = '';
@@ -88,11 +88,9 @@ getShowsData(tvApiUrl)
     getShowsData(involvementApiUrl)
       .then((response) => response.json())
       .then((likes) => {
-          likes.forEach((item, i)=>{
-            showsArray[i].likes =item.likes;
-          });
-          displayShows(showsArray,1);
+        likes.forEach((item, i) => {
+          showsArray[i].likes = item.likes;
+        });
+        displayShows(showsArray, 1);
       });
   });
-
-

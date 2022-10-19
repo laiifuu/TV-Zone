@@ -19,7 +19,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /*border: solid 1px pink;*/
+
+  /* border: solid 1px pink; */
 }
 
 body,
@@ -199,6 +200,7 @@ button {
   flex-direction: column;
   gap: 10px;
 }
+
 .page-control {
   background-color: transparent;
   color: var(--orange);
@@ -272,5 +274,4 @@ footer > ul {
   .info-btns > button {
     padding: 5px;
   }
-  
 }
