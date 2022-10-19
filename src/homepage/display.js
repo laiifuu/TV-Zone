@@ -1,9 +1,12 @@
+import renderPopup from '../commentsPopup/modules/displayPopup.js';
+
 const url = 'https://api.tvmaze.com/shows';
 
 const showsDiv = document.querySelector('.shows');
 const previous = document.querySelector('.previous');
 const next = document.querySelector('.next');
 const pageNum = document.querySelector('.page-number');
+const body = document.querySelector('body');
 
 const getShowsData = async (url) => {
   const result = await fetch(url);
@@ -20,11 +23,17 @@ function createShowCard(obj) {
     <div class="interactions-section">
       <div class="info-btns">
         <button>Reservations</button>
-        <button>Comments</button>
+        <button class="comments">Comments</button>
       </div>
         <button class="like-btn"><i class="fa-regular fa-heart" ></i></button>
     </div>
   `;
+
+  const commentsBtn = div.querySelector('.comments');
+  commentsBtn.addEventListener('click', ()=>{
+    const popup = renderPopup(obj);
+    body.append(popup);
+  });
 
   return div;
 }
