@@ -3,7 +3,7 @@ import generatePopupDOM from './popupDOM.js';
 import listener from './helperFunctions/listener.js';
 import addNewReservation from './APIs/addNewReservation.js';
 import getAllReservations from './APIs/getAllReservations.js';
-import renderReservations from './renderlist.js';
+import { renderReservations } from './renderlist.js';
 
 // let counter = 0;
 let reservations = [];
