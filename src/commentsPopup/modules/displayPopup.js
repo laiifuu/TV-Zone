@@ -1,9 +1,13 @@
 import { getCommentsData } from './commentsApi.js';
+import commentsCount from './commentsCounter.js';
 
 export const renderComments = (id, comments) => {
+  const commentTitle = document.querySelector('.comments-list-title');
+
   getCommentsData(id)
     .then((response) => response.json())
     .then((data) => {
+      commentTitle.innerHTML = `Comments (${commentsCount(data) || 0})`;
       comments.innerHTML = '';
       data.forEach((comment) => {
         const newComment = document.createElement('li');
@@ -35,7 +39,7 @@ const renderPopup = (obj) => {
  <textarea class="form-textarea" id="textarea" placeholder="Your Insights" maxlength="120" required></textarea>
 <button type="submit" class="comment-button" id="btn-submit">Comment</button>
 </form>  
-<div class='comments-list'> <p class='comments-list-title'> Comments <hr /> </p>
+<div class='comments-list'> <p class='comments-list-title'>  <hr /> </p>
 <ul class='comments-ul'></ul>
 </div>
 </div>
