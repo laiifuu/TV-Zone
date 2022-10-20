@@ -1,3 +1,6 @@
+import reservationPopup from './reservationPopup/modules/renderPopup.js';
+
+const body = document.querySelector('body');
 const showsArray = [
   {
     id: 1,
@@ -51,19 +54,17 @@ const showsArray = [
   },
 ];
 
-function createShowCard(arr) {
-  const showsSection = document.querySelector('.shows-section');
-  arr.forEach((obj) => {
-    const div = document.createElement('div');
-    div.classList.add('show-obj');
-    div.innerHTML = `<div class="img-placeholder">
+function createShowCard(obj) {
+  const div = document.createElement('div');
+  div.classList.add('show-card');
+  div.innerHTML = `<div class='img-placeholder'>
       <img
         src= ${obj.image.medium}
-        alt="The show's poster image"
+        alt='The show's poster image'
       />
     </div>
-    <div class="show-info">
-      <h2 class="show-title">${obj.name}</h2>
+    <div class='show-info'>
+      <h2 class='show-title'>${obj.name}</h2>
       <div>
         Genres
         <ul>
@@ -74,15 +75,20 @@ function createShowCard(arr) {
       ${obj.summary}
     </div>
     <div>
-      <button id=${obj.id} onclick='openModal(${
-  obj.id
-})' class="btn-comment">Comments</button>
-      <button>Reservations</button>
+      <button>Comments</button>
+      <button class="reservation-btn" >Reservations</button>
     </div>`;
-    showsSection.append(div);
+
+  const reservationBtn = div.querySelector('.reservation-btn');
+  reservationBtn.addEventListener('click', () => {
+    const popup = reservationPopup(obj);
+    body.append(popup);
   });
-  return showsSection;
+  return div;
 }
-createShowCard(showsArray);
+
+const showsSection = document.querySelector('.shows-section');
+showsSection.append(createShowCard(showsArray[0]));
+showsSection.append(createShowCard(showsArray[1]));
 
 export default showsArray;
