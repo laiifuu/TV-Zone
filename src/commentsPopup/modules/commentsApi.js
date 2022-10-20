@@ -1,6 +1,5 @@
 // post data to api
-const inolvementUrl =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/comments';
+const inolvementUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/comments';
 
 export const postCommentData = async (username, comment, id) => {
   const response = await fetch(`${inolvementUrl}`, {

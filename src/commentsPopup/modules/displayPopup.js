@@ -5,7 +5,7 @@ export const renderComments = (id, comments) => {
     .then((response) => response.json())
     .then((data) => {
       comments.innerHTML = '';
-      data.map((comment) => {
+      data.forEach((comment) => {
         const newComment = document.createElement('li');
         newComment.innerHTML = `<span class="commment-date">${comment.creation_date}</span><span class="user-name">${comment.username}:</span> <span
             class="comment-text">${comment.comment}</span>`;

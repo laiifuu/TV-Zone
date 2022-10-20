@@ -75,8 +75,8 @@ function createShowCard(arr) {
     </div>
     <div>
       <button id=${obj.id} onclick='openModal(${
-      obj.id
-    })' class="btn-comment">Comments</button>
+  obj.id
+})' class="btn-comment">Comments</button>
       <button>Reservations</button>
     </div>`;
     showsSection.append(div);
