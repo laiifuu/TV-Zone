@@ -12,12 +12,28 @@ const previous = document.querySelector('.previous');
 const next = document.querySelector('.next');
 const pageNum = document.querySelector('.page-number');
 const body = document.querySelector('body');
-
 let showsArray = [];
 
 const getShowsData = async (url) => {
   const result = await fetch(url);
   return result;
+};
+
+const likeShow = async (id, likesNumber, likesBtn) => {
+  await fetch(involvementApiUrl, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }).then(() => {
+    likesNumber.innerHTML = parseInt(likesNumber.innerHTML, 10) + 1;
+    const i = likesBtn.querySelector('i');
+    i.classList.remove('fa-regular');
+    i.classList.add('fa-solid');
+  });
 };
 
 function createShowCard(obj) {
@@ -46,6 +62,11 @@ function createShowCard(obj) {
   reservationBtn.addEventListener('click', () => {
     const popupReservation = reservationPopup(obj);
     body.append(popupReservation);
+  });
+
+  const likeBtn = div.querySelector('.like-btn');
+  likeBtn.addEventListener('click', () => {
+    likeShow(obj.id, likesNumber, likeBtn);
   });
 
   const commentsBtn = div.querySelector('.comments');
