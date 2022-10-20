@@ -1,4 +1,5 @@
 import getAllReservations from './APIs/getAllReservations.js';
+import count from './helperFunctions/reservationCounter.js';
 
 const renderReservations = (list, counter) => {
   const reservationList = document.querySelector('.reservation-list-items');
@@ -20,17 +21,17 @@ const renderReservations = (list, counter) => {
 
 const rerenderList = (id) => {
   let reservations = [];
-  let counter = 0;
+  let iterator = 0;
   const reservationList = document.querySelector('.reservation-list-items');
-  const count = document.querySelector('.counter');
-  count.innerHTML = '';
+  const counter = document.querySelector('.counter');
+  counter.innerHTML = '';
   reservationList.innerHTML = '';
   getAllReservations(id)
     .then((res) => res.json())
     .then((data) => {
       reservations = data;
-      counter = data.length;
-      renderReservations(reservations, counter);
+      iterator = count(data) || 0;
+      renderReservations(reservations, iterator);
     });
 };
 

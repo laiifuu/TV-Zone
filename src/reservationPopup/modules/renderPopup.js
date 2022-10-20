@@ -4,6 +4,7 @@ import listener from './helperFunctions/listener.js';
 import addNewReservation from './APIs/addNewReservation.js';
 import getAllReservations from './APIs/getAllReservations.js';
 import { renderReservations } from './renderlist.js';
+import count from './helperFunctions/reservationCounter.js';
 
 let counter = 0;
 let reservations = [];
@@ -21,7 +22,7 @@ const reservationPopup = (obj) => {
     .then((res) => res.json())
     .then((data) => {
       reservations = data;
-      counter = data.length || 0;
+      counter = count(data) || 0;
       renderReservations(reservations, counter);
     });
 
