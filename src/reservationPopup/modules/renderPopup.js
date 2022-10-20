@@ -5,7 +5,7 @@ import addNewReservation from './APIs/addNewReservation.js';
 import getAllReservations from './APIs/getAllReservations.js';
 import { renderReservations } from './renderlist.js';
 
-// let counter = 0;
+let counter = 0;
 let reservations = [];
 
 const reservationPopup = (obj) => {
@@ -21,8 +21,8 @@ const reservationPopup = (obj) => {
     .then((res) => res.json())
     .then((data) => {
       reservations = data;
-      // counter = data.length;
-      renderReservations(reservations);
+      counter = data.length || 0;
+      renderReservations(reservations, counter);
     });
 
   listener(closeBtn, 'click', () => Popup.remove());

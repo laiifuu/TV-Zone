@@ -30,7 +30,7 @@ const generatePopupDOM = (element, obj) => {
           <button class='reserve'>Reserve</button>
       </div>
       <div class='reservation-list'>
-        <p class='reservation-list-title'>Reservation List<hr /></p>
+        <p class='reservation-list-title'>Reservation List<span class='counter'></span><hr /></p>
         <ul class='reservation-list-items' ></ul>
       </div>
     </div>

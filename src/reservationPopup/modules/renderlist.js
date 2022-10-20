@@ -1,9 +1,11 @@
 import getAllReservations from './APIs/getAllReservations.js';
 
-const renderReservations = (list) => {
+const renderReservations = (list, counter) => {
   const reservationList = document.querySelector('.reservation-list-items');
+  const count = document.querySelector('.counter');
+  count.innerHTML = `  (${counter})`;
   const listHTML = list.map(
-    (item) => ` <li class='reservation-item'>
+    (item) => `<li class='reservation-item'>
   <p class='reservation-name'>${item.username}</p>
   <div class='reservation-dates'>
     <p>from: <span>${item.date_start}</span></p>
@@ -18,14 +20,17 @@ const renderReservations = (list) => {
 
 const rerenderList = (id) => {
   let reservations = [];
+  let counter = 0;
   const reservationList = document.querySelector('.reservation-list-items');
+  const count = document.querySelector('.counter');
+  count.innerHTML = '';
   reservationList.innerHTML = '';
   getAllReservations(id)
     .then((res) => res.json())
     .then((data) => {
       reservations = data;
-      // counter = data.length;
-      renderReservations(reservations);
+      counter = data.length;
+      renderReservations(reservations, counter);
     });
 };
 
