@@ -1,14 +1,8 @@
-import renderPopup, {
-  renderComments,
-} from '../commentsPopup/modules/displayPopup.js';
+import renderPopup, { renderComments } from '../commentsPopup/modules/displayPopup.js';
 import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
-import renderPopup from '../commentsPopup/modules/displayPopup.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
-const involvementApiUrl =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
-
-const url = 'https://api.tvmaze.com/shows';
+const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
 
 const showsDiv = document.querySelector('.shows');
 const previous = document.querySelector('.previous');
