@@ -1,3 +1,5 @@
+import getAllReservations from './APIs/getAllReservations.js';
+
 const renderReservations = (list) => {
   const reservationList = document.querySelector('.reservation-list-items');
   const listHTML = list.map(
@@ -14,4 +16,17 @@ const renderReservations = (list) => {
   reservationList.innerHTML = listHTML.join('');
 };
 
-export default renderReservations;
+const rerenderList = (id) => {
+  let reservations = [];
+  const reservationList = document.querySelector('.reservation-list-items');
+  reservationList.innerHTML = '';
+  getAllReservations(id)
+    .then((res) => res.json())
+    .then((data) => {
+      reservations = data;
+      // counter = data.length;
+      renderReservations(reservations);
+    });
+};
+
+export { renderReservations, rerenderList };

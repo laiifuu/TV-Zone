@@ -1,5 +1,8 @@
-import renderPopup, { renderComments } from '../commentsPopup/modules/displayPopup.js';
+import renderPopup, {
+  renderComments,
+} from '../commentsPopup/modules/displayPopup.js';
 import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
+import reservationPopup from '../reservationPopup/modules/renderPopup.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
@@ -37,25 +40,29 @@ function createShowCard(obj) {
   const div = document.createElement('div');
   div.classList.add('show-card');
   div.innerHTML = `
-<div class="img-placeholder">
-<img src="${obj.image.original}" alt="${obj.name} poster">
-</div>
-<div class="interactions-section">
-<div class="info-btns">
-<button>Reservations</button>
-<button class="comments">Comments</button>
-</div>
-<div class="like-section">
-<button class="like-btn"><i class="fa-regular fa-heart" ></i></button>
-<span class="likes-number">0</span>
-</div>
-</div>
-`;
-
+    <div class='img-placeholder'>
+    <img src='${obj.image.original}' alt='${obj.name} poster'>
+    </div>
+    <div class='interactions-section'>
+      <div class='info-btns'>
+        <button class='reservation-btn'>Reservations</button>
+        <button class='comments'>Comments</button>
+      </div>
+      <div class='like-section'>
+      <button class='like-btn'><i class='fa-regular fa-heart' ></i></button>  
+      <span class='likes-number'>0</span>
+      </div>
+    </div>
+  `;
   const likesNumber = div.querySelector('.likes-number');
   if ('likes' in obj) {
     likesNumber.innerHTML = obj.likes;
   }
+  const reservationBtn = div.querySelector('.reservation-btn');
+  reservationBtn.addEventListener('click', () => {
+    const popupReservation = reservationPopup(obj);
+    body.append(popupReservation);
+  });
 
   const likeBtn = div.querySelector('.like-btn');
   likeBtn.addEventListener('click', () => {
