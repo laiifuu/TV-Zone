@@ -114,6 +114,7 @@
   margin-bottom: 0;
   font-size: 25px;
   font-weight: 500;
+  color: black;
 
   /* border: 1px solid #d9d9b2; */
   padding: 6px;
@@ -187,7 +188,8 @@
   min-height: 280px;
   max-height: 280px;
   width: 180px;
-  overflow: scroll;
+  color: black;
+  overflow: auto;
   border: 1px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
@@ -195,6 +197,7 @@
 
 .comments-list-title {
   text-align: center;
+  color: black;
 }
 
 @keyframes animitop {
