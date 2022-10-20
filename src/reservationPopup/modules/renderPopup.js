@@ -1,43 +1,35 @@
 import '../reservationPopupStyles.css';
+import generatePopupDOM from './popupDOM.js';
+import listener from './helperFunctions/listener.js';
+import addNewReservation from './APIs/addNewReservation.js';
+import getAllReservations from './APIs/getAllReservations.js';
+import renderReservations from './renderlist.js';
+
+// let counter = 0;
+let reservations = [];
 
 const reservationPopup = (obj) => {
   const Popup = document.createElement('div');
-  Popup.classList.add('popup');
-  Popup.innerHTML = `
-  <div class='popup-container'>
-  <img src=${obj.image.original} alt='Show Image' class='bg-img'>
-    <i class='close-icon fa-regular fa-circle-xmark'></i>
-    <div class='show'>
-    <img src=${obj.image.medium} alt='Show Image' class='img'>
-    <div class='show-details'>
-      <p class='img-label'>${obj.name}</p>
-      <ul class='details-grid'>
-          <li class='details-section'>Genres<hr class='border'/></li>
-          ${obj.genres
-    .map((genre) => `<li class='genre-item'>${genre}</li>`)
-    .join('')}
-            <li class='details-section'>Rating:   <span>${obj.rating.average}</span><hr class='border'/></li>
-            <li class='details-section'>Summary:   <hr class='border'/><span class='summary'>${obj.summary}</span></li>
-      </ul>
-    </div>
-    </div>
-    <div class='reservation'>
-      <div class='reservation-form'>
-          <input type='text' placeholder='your name' class='name-input'>
-          <input type='date' placeholder='start date' class='startdate-input'>
-          <input type='date' placeholder='end date' class='enddate-input'>
-          <button class='reserve'>Reserve</button>
-      </div>
-      <div class='reservation-list'>
-        <p class='reservation-list-title'>Reservation List<hr /></p>
-      </div>
-    </div>
-  </div>`;
-
+  generatePopupDOM(Popup, obj);
   const closeBtn = Popup.querySelector('.close-icon');
-  closeBtn.addEventListener('click', () => {
-    Popup.remove();
+  const reserve = Popup.querySelector('.reserve');
+  const userName = Popup.querySelector('.name-input');
+  const dateStart = Popup.querySelector('.startdate-input');
+  const dateEnd = Popup.querySelector('.enddate-input');
+
+  getAllReservations(obj.id)
+    .then((res) => res.json())
+    .then((data) => {
+      reservations = data;
+      // counter = data.length;
+      renderReservations(reservations);
+    });
+
+  listener(closeBtn, 'click', () => Popup.remove());
+  listener(reserve, 'click', () => {
+    addNewReservation(obj.id, userName.value, dateStart.value, dateEnd.value);
   });
+
   return Popup;
 };
 export default reservationPopup;
