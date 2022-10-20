@@ -1,10 +1,7 @@
 import renderPopup, {
   renderComments,
 } from '../commentsPopup/modules/displayPopup.js';
-import {
-  getCommentsData,
-  postCommentData,
-} from '../commentsPopup/modules/commentsApi.js';
+import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
 
 const url = 'https://api.tvmaze.com/shows';
 const showsDiv = document.querySelector('.shows');
@@ -36,10 +33,8 @@ function createShowCard(obj) {
   const commentsBtn = div.querySelector('.comments');
   commentsBtn.addEventListener('click', () => {
     const popup = renderPopup(obj);
-    // getCommentsData(obj.id);
     body.append(popup);
     const comments = document.querySelector('.comments-ul');
-    console.log(comments);
     renderComments(obj.id, comments);
     const form = document.querySelector('.comments-form');
     form.addEventListener('submit', async (e) => {

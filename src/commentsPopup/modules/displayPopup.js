@@ -4,11 +4,10 @@ export const renderComments = (id, comments) => {
   getCommentsData(id)
     .then((response) => response.json())
     .then((data) => {
-      console.log(comments);
       comments.innerHTML = '';
-      data.forEach((comment) => {
+      data.map((comment) => {
         const newComment = document.createElement('li');
-        newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
+        newComment.innerHTML = `<span class="commment-date">${comment.creation_date}</span><span class="user-name">${comment.username}:</span> <span
             class="comment-text">${comment.comment}</span>`;
         comments.appendChild(newComment);
       });
@@ -46,34 +45,6 @@ const renderPopup = (obj) => {
     popupCommentWindow.remove();
   });
 
-  // const commentButton = popupCommentWindow.querySelector('.comment-button');
-  // const comments = popupCommentWindow.querySelector('.comments-ul');
-  // getCommentsData(obj.id)
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log(data);
-  //     data.map((comment) => {
-  //       comments.innerHTML = '';
-  //       data.forEach((comment) => {
-  //         const newComment = document.createElement('li');
-  //         newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
-  //           class="comment-text">${comment.comment}</span>`;
-  //         comments.appendChild(newComment);
-  //       });
-  //     });
-  //   });
-
   return popupCommentWindow;
 };
 export default renderPopup;
-
-// ${
-//   comments.length >= 1
-//     ? comments
-//         .map(
-//           (comment) =>
-//             `<p>${comment.creation_date} ${comment.username} : ${comment.comment}   </p>`,
-//         )
-//         .join('')
-//     : '<p> No Comments Available</p>'
-// }
