@@ -33,7 +33,7 @@ const renderPopup = (obj) => {
 <label for="name">
  <input type="text" id="name" placeholder="Your Name" class="name-input" required></label>
  <textarea class="form-textarea" id="textarea" placeholder="Your Insights" maxlength="120" required></textarea>
-<button type="submit" onsubmit='' class="comment-button" id="btn-submit">Comment</button>
+<button type="submit" class="comment-button" id="btn-submit">Comment</button>
 </form>  
 <div class='comments-list'> <p class='comments-list-title'> Comments <hr /> </p>
 <ul class='comments-ul'></ul>
