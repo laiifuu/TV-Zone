@@ -32,6 +32,7 @@ const likeShow = async (id, likesNumber, likesBtn) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then(() => {
+    showsArray[id].likes = showsArray[id].likes + 1;
     likesNumber.innerHTML = parseInt(likesNumber.innerHTML, 10) + 1;
     const i = likesBtn.querySelector('i');
     i.classList.remove('fa-regular');
@@ -119,6 +120,7 @@ function loadPrevious(pageNumber, shows, showsHeader) {
     displayShows(shows, previousPage, showsHeader);
   }
 }
+
 previous.addEventListener('click', () => {
   loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader);
 });
