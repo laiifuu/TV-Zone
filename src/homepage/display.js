@@ -1,6 +1,6 @@
 import renderPopup, { renderComments } from '../commentsPopup/modules/displayPopup.js';
 import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
-import {countShows, countDisplayedShows }from './showsCounter.js';
+import { countShows, countDisplayedShows } from './showsCounter.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
@@ -85,13 +85,13 @@ function createShowCard(obj) {
   return div;
 }
 
-const displayShows = (shows, pageNumber,heading) => {
+const displayShows = (shows, pageNumber, heading) => {
   shows.slice(pageNumber * 10 - 10, pageNumber * 10).forEach((show) => {
     const div = createShowCard(show);
     showsDiv.append(div);
   });
-  let displayedShowsObj = countDisplayedShows(showsDiv);
-  let showsCount = countShows(showsArray);
+  const displayedShowsObj = countDisplayedShows(showsDiv);
+  const showsCount = countShows(showsArray);
   heading.innerHTML = `Shows: (${displayedShowsObj.firstId}, ${displayedShowsObj.lastId}) of ${showsCount}`;
 };
 

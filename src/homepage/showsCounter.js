@@ -1,5 +1,5 @@
 export function countDisplayedShows(showsDiv) {
-  let arr = Array.from(showsDiv.querySelectorAll('.show-card'));
+  const arr = Array.from(showsDiv.querySelectorAll('.show-card'));
   return {
     count: arr.length,
     firstId: parseInt(arr[0].id, 10),
@@ -7,6 +7,6 @@ export function countDisplayedShows(showsDiv) {
   };
 }
 
-export function countShows(arr){
-    return arr.length;
+export function countShows(arr) {
+  return arr.length;
 }
