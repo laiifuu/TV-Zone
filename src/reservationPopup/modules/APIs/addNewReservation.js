@@ -1,3 +1,5 @@
+import { rerenderList } from '../renderlist.js';
+
 const addReservationURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/reservations';
 
 const addNewReservation = (id, userName, dateStart, dateEnd) => {
@@ -14,6 +16,7 @@ const addNewReservation = (id, userName, dateStart, dateEnd) => {
     },
   })
     .then((res) => res)
+    .then(() => rerenderList(id))
     .catch((err) => console.log('Network Error: ', err));
 };
 
