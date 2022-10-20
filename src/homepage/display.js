@@ -3,6 +3,7 @@ import renderPopup, {
 } from '../commentsPopup/modules/displayPopup.js';
 import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
 import reservationPopup from '../reservationPopup/modules/renderPopup.js';
+import { countShows, countDisplayedShows } from './showsCounter.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
@@ -12,6 +13,8 @@ const previous = document.querySelector('.previous');
 const next = document.querySelector('.next');
 const pageNum = document.querySelector('.page-number');
 const body = document.querySelector('body');
+const showsHeader = document.querySelector('.shows-header');
+
 let showsArray = [];
 
 const getShowsData = async (url) => {
@@ -29,6 +32,7 @@ const likeShow = async (id, likesNumber, likesBtn) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then(() => {
+    showsArray[id].likes += 1;
     likesNumber.innerHTML = parseInt(likesNumber.innerHTML, 10) + 1;
     const i = likesBtn.querySelector('i');
     i.classList.remove('fa-regular');
@@ -39,6 +43,7 @@ const likeShow = async (id, likesNumber, likesBtn) => {
 function createShowCard(obj) {
   const div = document.createElement('div');
   div.classList.add('show-card');
+  div.setAttribute('id', obj.id);
   div.innerHTML = `
     <div class='img-placeholder'>
     <img src='${obj.image.original}' alt='${obj.name} poster'>
@@ -87,35 +92,40 @@ function createShowCard(obj) {
   });
   return div;
 }
-const displayShows = (shows, pageNumber) => {
+
+const displayShows = (shows, pageNumber, heading) => {
   shows.slice(pageNumber * 10 - 10, pageNumber * 10).forEach((show) => {
     const div = createShowCard(show);
     showsDiv.append(div);
   });
+  const displayedShowsObj = countDisplayedShows(showsDiv);
+  const showsCount = countShows(showsArray);
+  heading.innerHTML = `Shows: (${displayedShowsObj.firstId}, ${displayedShowsObj.lastId}) of ${showsCount}`;
 };
 
-function loadNext(pageNumber, shows) {
+function loadNext(pageNumber, shows, showsHeader) {
   const nextPage = pageNumber + 1;
   if (nextPage < 25) {
     pageNum.innerHTML = nextPage;
     showsDiv.innerHTML = '';
-    displayShows(shows, nextPage);
+    displayShows(shows, nextPage, showsHeader);
   }
 }
 
-function loadPrevious(pageNumber, shows) {
+function loadPrevious(pageNumber, shows, showsHeader) {
   const previousPage = pageNumber - 1;
   if (previousPage > 0) {
-    pageNum.innerHTML = previous;
+    pageNum.innerHTML = previousPage;
     showsDiv.innerHTML = '';
-    displayShows(shows, previousPage);
+    displayShows(shows, previousPage, showsHeader);
   }
 }
+
 previous.addEventListener('click', () => {
-  loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray);
+  loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader);
 });
 next.addEventListener('click', () => {
-  loadNext(parseInt(pageNum.innerHTML, 10), showsArray);
+  loadNext(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader);
 });
 
 getShowsData(tvApiUrl)
@@ -128,6 +138,6 @@ getShowsData(tvApiUrl)
         likes.forEach((item, i) => {
           showsArray[i].likes = item.likes;
         });
-        displayShows(showsArray, 1);
+        displayShows(showsArray, 1, showsHeader);
       });
   });
