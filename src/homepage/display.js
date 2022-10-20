@@ -1,4 +1,5 @@
-import renderPopup from '../commentsPopup/modules/displayPopup.js';
+import renderPopup, { renderComments } from '../commentsPopup/modules/displayPopup.js';
+import { postCommentData } from '../commentsPopup/modules/commentsApi.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
@@ -43,11 +44,20 @@ function createShowCard(obj) {
   commentsBtn.addEventListener('click', () => {
     const popup = renderPopup(obj);
     body.append(popup);
+    const comments = document.querySelector('.comments-ul');
+    renderComments(obj.id, comments);
+    const form = document.querySelector('.comments-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userName = document.querySelector('.name-input').value;
+      const textArea = document.querySelector('.form-textarea').value;
+      await postCommentData(userName, textArea, obj.id);
+      renderComments(obj.id, comments);
+      form.reset();
+    });
   });
-
   return div;
 }
-
 const displayShows = (shows, pageNumber) => {
   shows.slice(pageNumber * 10 - 10, pageNumber * 10).forEach((show) => {
     const div = createShowCard(show);
@@ -72,11 +82,9 @@ function loadPrevious(pageNumber, shows) {
     displayShows(shows, previousPage);
   }
 }
-
 previous.addEventListener('click', () => {
   loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray);
 });
-
 next.addEventListener('click', () => {
   loadNext(parseInt(pageNum.innerHTML, 10), showsArray);
 });
