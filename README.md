@@ -2,19 +2,19 @@
 
 # TV-Zone
 
-> TV Zone is a website that displays information about TV shows. It also allows you to like the shows, comment on the shows, and make reservations. The data about the shows is being fethed from the [TVMaze API](https://www.tvmaze.com/api). The likes, comments and reservations are being preserved in the external [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
+> TV Zone is a website that displays information about TV shows. It also allows you to like the shows, comment on the shows, and make reservations. The data about the shows is being fetched from the [TVMaze API](https://www.tvmaze.com/api). The likes, comments and reservations are being preserved in the external [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
 
 ## Built With
 
-HTML5
-CSS3
-JavaScript (ES6)
-[TVMaze API](https://www.tvmaze.com/api)
-[Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
-Webpack
-Linters (Lighthouse, Webhint, Stylelint, Eslint)
-Gitflow
-Jest
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- [TVMaze API](https://www.tvmaze.com/api)
+- [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
+- Webpack
+- Linters (Lighthouse, Webhint, Stylelint, Eslint)
+- Gitflow
+- Jest
 
 ## Live demo
 
@@ -51,7 +51,7 @@ Assuming you have git and node.js installed on your computer, please follow the 
 - Twitter: [@Zuhaib042](https://twitter.com/Zuhaib042)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Fellah Hayet**
+👤 **Hayet Fellah**
 
 - GitHub: [@laiifuu](https://github.com/laiifuu)
 - Twitter: [@hayet_fe](https://twitter.com/hayet_fe)
