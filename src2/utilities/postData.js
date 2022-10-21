@@ -1,3 +1,25 @@
+import { rerenderList } from "./renderlist.js";
+
+export const addNewReservation = (id, userName, dateStart, dateEnd, url) => {
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: id,
+      username: userName,
+      date_start: dateStart,
+      date_end: dateEnd,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((res) => res)
+    .then(() => rerenderList(id, url+'?item_id='))
+    .catch((err) => console.log('Network Error: ', err));
+};
+
+export default addNewReservation;
+
 export const likeShow = async (url, id, likesNumber, likesBtn, showsArray) => {
     await fetch(url, {
       method: "POST",

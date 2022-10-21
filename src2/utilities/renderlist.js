@@ -1,5 +1,5 @@
-import getAllReservations from './APIs/getAllReservations.js';
-import count from '../../counterFunctions/reservationCounter.js';
+import {getAllReservations} from './fetchData.js';
+import count from '../counterFunctions/reservationCounter.js';
 
 const renderReservations = (list, counter) => {
   const reservationList = document.querySelector('.reservation-list');
@@ -19,14 +19,14 @@ const renderReservations = (list, counter) => {
   reservationList.innerHTML = listHTML.join('');
 };
 
-const rerenderList = (id) => {
+const rerenderList = (id, url) => {
   let reservations = [];
   let iterator = 0;
-  const reservationList = document.querySelector('.reservation-list-items');
+  const reservationList = document.querySelector('.reservation-list');
   const counter = document.querySelector('.counter');
   counter.innerHTML = '';
   reservationList.innerHTML = '';
-  getAllReservations(id)
+  getAllReservations(id, url)
     .then((res) => res.json())
     .then((data) => {
       reservations = data;

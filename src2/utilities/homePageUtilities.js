@@ -3,7 +3,7 @@ import {
   renderComments,
 } from "../utilities/commentsPopUpUtilities.js";
 import { postCommentData } from "../utilities/postData.js";
-import reservationPopup from "../reservationPopup/modules/renderPopup.js";
+import reservationPopup from "../utilities/renderPopup.js";
 import {
   countShows,
   countDisplayedShows,
