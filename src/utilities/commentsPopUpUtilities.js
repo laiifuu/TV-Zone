@@ -38,7 +38,7 @@ export const renderPopup = (obj) => {
         <ul class="genres">${obj.genres
     .map((genre) => `<li class='genre-item'>${genre}</li>`)
     .join('')}</ul>
-        <div>Rating: <span class="rating">${obj.rating.average}</span></div>
+        <div class="rating">Rating: <span class="rating">${obj.rating.average}</span></div>
         ${obj.summary}
       </div>
     </section>

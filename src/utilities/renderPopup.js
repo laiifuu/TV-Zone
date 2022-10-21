@@ -30,7 +30,7 @@ const reservationPopup = (obj) => {
       renderReservations(reservations, counter);
     }).catch((error) => console.log(error));
 
-  listener(closeBtn, 'click', () => Popup.remove());
+  listener(closeBtn, 'click', () => container.remove());
   listener(reserve, 'click', () => {
     addNewReservation(obj.id, userName.value, dateStart.value, dateEnd.value, url);
   });
