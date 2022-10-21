@@ -18,7 +18,7 @@
 
 ## Live demo
 
-You can view a live demo of the project using this [link](https://laiifuu.github.io/TV-Maze/dist/).
+You can view a live demo of the project using this [link](https://laiifuu.github.io/TV-Zone/dist/).
 
 ## Getting Started
 
