@@ -1,4 +1,4 @@
-import { countDisplayedShows, countShows } from './showsCounter.js';
+import { countDisplayedShows, countShows } from '../counterFunctions/showsCounter.js';
 
 const div = document.createElement('div');
 div.innerHTML += `

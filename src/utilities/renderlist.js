@@ -1,17 +1,17 @@
-import getAllReservations from './APIs/getAllReservations.js';
-import count from './helperFunctions/reservationCounter.js';
+import { getAllReservations } from './fetchData.js';
+import count from '../counterFunctions/reservationCounter.js';
 
 const renderReservations = (list, counter) => {
-  const reservationList = document.querySelector('.reservation-list-items');
+  const reservationList = document.querySelector('.reservation-list');
   const count = document.querySelector('.counter');
   count.innerHTML = `  (${counter})`;
   const listHTML = list.map(
     (item) => `<li class='reservation-item'>
-  <p class='reservation-name'>${item.username}</p>
-  <div class='reservation-dates'>
-    <p>from: <span>${item.date_start}</span></p>
-    <p>to: <span>${item.date_end}</span></p>
-  </div>
+  <span class='user-name'>${item.username}</span>: 
+  <span class='reservation-dates'>
+    from <span class="date">${item.date_start}</span>
+    to <span class="date">${item.date_end}</span>
+  </span>
   </li>
   `,
   );
@@ -19,14 +19,14 @@ const renderReservations = (list, counter) => {
   reservationList.innerHTML = listHTML.join('');
 };
 
-const rerenderList = (id) => {
+const rerenderList = (id, url) => {
   let reservations = [];
   let iterator = 0;
-  const reservationList = document.querySelector('.reservation-list-items');
+  const reservationList = document.querySelector('.reservation-list');
   const counter = document.querySelector('.counter');
   counter.innerHTML = '';
   reservationList.innerHTML = '';
-  getAllReservations(id)
+  getAllReservations(id, url)
     .then((res) => res.json())
     .then((data) => {
       reservations = data;
