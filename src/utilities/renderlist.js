@@ -1,4 +1,4 @@
-import {getAllReservations} from './fetchData.js';
+import { getAllReservations } from './fetchData.js';
 import count from '../counterFunctions/reservationCounter.js';
 
 const renderReservations = (list, counter) => {

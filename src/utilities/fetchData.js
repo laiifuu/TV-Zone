@@ -8,7 +8,7 @@ export const getCommentsData = async (id, url) => {
   return response;
 };
 
-export const getAllReservations = async (id,url) => {
+export const getAllReservations = async (id, url) => {
   const res = await fetch(`${url}${id}`);
   return res;
 };

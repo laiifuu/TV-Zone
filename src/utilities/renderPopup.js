@@ -1,8 +1,7 @@
-//import '../reservationPopupStyles.css';
 import generatePopupDOM from './popupDOM.js';
 import listener from './listener.js';
-import {addNewReservation} from './postData.js';
-import {getAllReservations} from './fetchData.js';
+import { addNewReservation } from './postData.js';
+import { getAllReservations } from './fetchData.js';
 import { renderReservations } from './renderlist.js';
 import count from '../counterFunctions/reservationCounter.js';
 
@@ -26,7 +25,7 @@ const reservationPopup = (obj) => {
       reservations = data;
       counter = count(data) || 0;
       renderReservations(reservations, counter);
-    }).catch(error => console.log(error));
+    }).catch((error) => console.log(error));
 
   listener(closeBtn, 'click', () => Popup.remove());
   listener(reserve, 'click', () => {

@@ -9,8 +9,8 @@ const generatePopupDOM = (element, obj) => {
       <div class="show-info">
         <h2  class="show-title">${obj.name}</h2>
         <ul class="genres">${obj.genres
-          .map((genre) => `<li class='genre-item'>${genre}</li>`)
-          .join('')}</ul>
+    .map((genre) => `<li class='genre-item'>${genre}</li>`)
+    .join('')}</ul>
         <div>Rating: <span class="rating">${obj.rating.average}</span></div>
         ${obj.summary}
       </div>
