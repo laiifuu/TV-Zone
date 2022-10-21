@@ -1,9 +1,16 @@
-import renderPopup, {
+import {
+  renderPopup,
   renderComments,
-} from "../commentsPopup/modules/displayPopup.js";
-import { postCommentData } from "../commentsPopup/modules/commentsApi.js";
-import reservationPopup from "../reservationPopup/modules/renderPopup.js";
-import { countShows, countDisplayedShows } from "./showsCounter.js";
+} from "./commentsPopUpUtilities.js";
+import { postCommentData } from "./postData.js";
+import reservationPopup from "./renderPopup.js";
+import {
+  countShows,
+  countDisplayedShows,
+} from "../counterFunctions/showsCounter.js";
+
+const url1 =
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/comments";
 
 export const getShowsData = async (url) => {
   const result = await fetch(url);
@@ -28,26 +35,25 @@ export const likeShow = async (url, id, likesNumber, likesBtn, showsArray) => {
   });
 };
 
-
 export function createShowCard(obj, body, url, showsArray) {
   const div = document.createElement("div");
   div.classList.add("show-card");
   div.setAttribute("id", obj.id);
   div.innerHTML = `
-      <div class='img-placeholder'>
-      <img src='${obj.image.original}' alt='${obj.name} poster'>
-      </div>
-      <div class='interactions-section'>
-        <div class='info-btns'>
-          <button class='reservation-btn'>Reservations</button>
-          <button class='comments'>Comments</button>
+        <div class='img-placeholder'>
+        <img src='${obj.image.original}' alt='${obj.name} poster'>
         </div>
-        <div class='like-section'>
-        <button class='like-btn'><i class='fa-regular fa-heart' ></i></button>  
-        <span class='likes-number'>0</span>
+        <div class='interactions-section'>
+          <div class='info-btns'>
+            <button class='reservation-btn'>Reservations</button>
+            <button class='comments'>Comments</button>
+          </div>
+          <div class='like-section'>
+          <button class='like-btn'><i class='fa-regular fa-heart' ></i></button>  
+          <span class='likes-number'>0</span>
+          </div>
         </div>
-      </div>
-    `;
+      `;
   const likesNumber = div.querySelector(".likes-number");
   if ("likes" in obj) {
     likesNumber.innerHTML = obj.likes;
@@ -60,21 +66,21 @@ export function createShowCard(obj, body, url, showsArray) {
 
   const likeBtn = div.querySelector(".like-btn");
   likeBtn.addEventListener("click", () => {
-    likeShow(url ,obj.id, likesNumber, likeBtn, showsArray);
+    likeShow(url, obj.id, likesNumber, likeBtn, showsArray);
   });
 
   const commentsBtn = div.querySelector(".comments");
   commentsBtn.addEventListener("click", () => {
     const popup = renderPopup(obj);
     body.append(popup);
-    const comments = document.querySelector(".comments-ul");
+    const comments = document.querySelector(".comments-list");
     renderComments(obj.id, comments);
-    const form = document.querySelector(".comments-form");
+    const form = document.querySelector(".popup-form");
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const userName = document.querySelector(".name-input").value;
-      const textArea = document.querySelector(".form-textarea").value;
-      await postCommentData(userName, textArea, obj.id);
+      const textArea = document.querySelector(".comment-input").value;
+      await postCommentData(userName, textArea, obj.id, url1);
       renderComments(obj.id, comments);
       form.reset();
     });
@@ -82,8 +88,16 @@ export function createShowCard(obj, body, url, showsArray) {
   return div;
 }
 
-export const displayShows = (shows, pageNumber, heading, showsDiv, url, body) => {
+export const displayShows = (
+  shows,
+  pageNumber,
+  heading,
+  showsDiv,
+  url,
+  body
+) => {
   shows.slice(pageNumber * 10 - 10, pageNumber * 10).forEach((show) => {
+    console.log(showsDiv);
     const div = createShowCard(show, body, url, shows);
     showsDiv.append(div);
   });
@@ -101,7 +115,13 @@ export function loadNext(pageNumber, shows, showsHeader, pageNum, showsDiv) {
   }
 }
 
-export function loadPrevious(pageNumber, shows, showsHeader, pageNum, showsDiv) {
+export function loadPrevious(
+  pageNumber,
+  shows,
+  showsHeader,
+  pageNum,
+  showsDiv
+) {
   const previousPage = pageNumber - 1;
   if (previousPage > 0) {
     pageNum.innerHTML = previousPage;
@@ -109,4 +129,3 @@ export function loadPrevious(pageNumber, shows, showsHeader, pageNum, showsDiv) 
     displayShows(shows, previousPage, showsHeader);
   }
 }
-

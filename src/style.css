@@ -20,7 +20,7 @@
 *::after {
   box-sizing: border-box;
 
-  /* border: solid 1px pink; */
+  /* border: solid 1px pink;  */
 }
 
 body,
@@ -148,6 +148,10 @@ main {
   margin-top: 40px;
 }
 
+.shows-header{
+  font-weight: 600px;
+}
+
 .shows {
   display: flex;
   flex-wrap: wrap;
@@ -176,15 +180,15 @@ main {
   right: 0;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 1));
 }
 
 button {
-  padding: 15px;
+  padding: 10px;
   border: none;
-  background-color: var(--orange);
+  background-color: var(--pink);
   color: var(--card-headline);
   cursor: pointer;
 }
@@ -195,17 +199,22 @@ button {
   width: 48px;
 }
 
+.likes-number {
+  font-weight: 700;
+  color: var(--pink);
+}
+
 .info-btns {
   display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
+
 .page-control {
   background-color: transparent;
-  color: var(--orange);
+  color: var(--grey);
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 footer {
@@ -223,6 +232,125 @@ footer > ul {
 
 .hidden {
   display: none;
+}
+
+/* popupstyling */
+.popup{
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  overflow: scroll;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.show-summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.genres {
+  display: flex;
+  gap: 5px;
+}
+
+.genre-item{
+  background-color: var(--pink);
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--card-headline);
+  font-size: var(--fs-200);
+  font-weight: 600;
+}
+
+.add-comment-section, .add-reservation{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.popup-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap:10px;
+}
+
+input, textarea{
+  padding: 10px;
+  background-color: #a7a9be;
+  border: none;
+}
+
+.comments-section, .reservations-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comments-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comments-list > li, .reservation-list>li{
+  padding: 10px;
+  border-bottom: 1px solid var(--grey);
+}
+
+.commment-date, .user-name{
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.date{
+  color: var(--grey);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 600px) {
+  .shows {
+    align-items: stretch;
+  }
+
+  .show-card{
+    width: 40%;
+  }
+
+  .info-btns{
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -259,19 +387,50 @@ footer > ul {
   }
 
   .shows {
-    gap: 10px;
+    gap: 40px;
     align-items: stretch;
   }
 
   .show-card {
-    width: 20%;
+    width: 25%;
   }
 
   .img-placeholder > img {
     height: auto;
   }
 
+  .info-buttons {
+    flex-direction: column;
+  }
+
   .info-btns > button {
     padding: 5px;
+  }
+
+  .popup{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .show-summary {
+    flex-direction: row;
+  }
+
+  .shows-poster{
+    flex: 1;
+  }
+
+  .show-info{
+    flex: 2;
+    align-items: flex-start;
+  }
+
+  .add-comment-section, .add-reservation{
+    flex: 0.5;
+  }
+
+  .comments-section, .reservations-section{
+    flex: 0.5;
   }
 }

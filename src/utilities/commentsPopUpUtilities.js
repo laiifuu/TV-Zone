@@ -1,5 +1,5 @@
 import commentsCount from '../counterFunctions/commentsCounter.js';
-import { getCommentsData } from '../utilities/fetchData.js';
+import { getCommentsData } from './fetchData.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/comments';
 
