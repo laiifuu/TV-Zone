@@ -1,10 +1,5 @@
-import "./style.css";
-import {
-  displayShows,
-  loadNext,
-  loadPrevious,
-  getShowsData 
-} from "./homepage/utilities";
+//import "./style.css";
+import { displayShows, loadNext,loadPrevious,getShowsData} from "./utilities/homePageUtilities.js";
 
 const tvApiUrl = "https://api.tvmaze.com/shows";
 const involvementApiUrl =
@@ -23,6 +18,7 @@ previous.addEventListener("click", () => {
   loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv);
 });
 next.addEventListener("click", () => {
+  console.log(showsDiv);
   loadNext(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv);
 });
 

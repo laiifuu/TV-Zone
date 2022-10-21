@@ -1,4 +1,4 @@
-import commentsCount from './commentsCounter.js';
+import commentsCount from '../counterFunctions/commentsCounter';
 
 describe('testing comments counter function', () => {
   it('should count the comments inside the given data array', () => {

@@ -1,4 +1,4 @@
-import count from './modules/helperFunctions/reservationCounter.js';
+import count from '../counterFunctions/reservationCounter.js';
 
 const reservations = [];
 
