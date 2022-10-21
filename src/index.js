@@ -15,11 +15,11 @@ const showsHeader = document.querySelector(".shows-header");
 let showsArray = [];
 
 previous.addEventListener("click", () => {
-  loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv);
+  loadPrevious(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv, body, tvApiUrl);
 });
 next.addEventListener("click", () => {
-  console.log(showsDiv);
-  loadNext(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv);
+  loadNext(parseInt(pageNum.innerHTML, 10), showsArray, showsHeader, pageNum, showsDiv, body, tvApiUrl);
+  console.log(tvApiUrl);
 });
 
 getShowsData(tvApiUrl)
