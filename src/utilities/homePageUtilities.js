@@ -35,7 +35,7 @@ export const likeShow = async (url, id, likesNumber, likesBtn, showsArray) => {
   });
 };
 
-export function createShowCard(obj, body, url, showsArray) {
+export function createShowCard(obj, body, likesURL, showsArray) {
   const div = document.createElement("div");
   div.classList.add("show-card");
   div.setAttribute("id", obj.id);
@@ -66,7 +66,7 @@ export function createShowCard(obj, body, url, showsArray) {
 
   const likeBtn = div.querySelector(".like-btn");
   likeBtn.addEventListener("click", () => {
-    likeShow(url, obj.id, likesNumber, likeBtn, showsArray);
+    likeShow(likesURL, obj.id, likesNumber, likeBtn, showsArray);
   });
 
   const commentsBtn = div.querySelector(".comments");
@@ -97,35 +97,30 @@ export const displayShows = (
   body
 ) => {
   shows.slice(pageNumber * 10 - 10, pageNumber * 10).forEach((show) => {
-    console.log(showsDiv);
     const div = createShowCard(show, body, url, shows);
     showsDiv.append(div);
   });
+  console.log(showsDiv);
   const displayedShowsObj = countDisplayedShows(showsDiv);
   const showsCount = countShows(shows);
   heading.innerHTML = `Shows: (${displayedShowsObj.firstId}, ${displayedShowsObj.lastId}) of ${showsCount}`;
 };
 
-export function loadNext(pageNumber, shows, showsHeader, pageNum, showsDiv) {
+export function loadNext(pageNumber, shows, showsHeader, pageNum, showsDiv, body, url) {
+console.log(url);
   const nextPage = pageNumber + 1;
   if (nextPage < 25) {
     pageNum.innerHTML = nextPage;
     showsDiv.innerHTML = "";
-    displayShows(shows, nextPage, showsHeader);
+    displayShows(shows, nextPage, showsHeader, showsDiv, url, body);
   }
 }
 
-export function loadPrevious(
-  pageNumber,
-  shows,
-  showsHeader,
-  pageNum,
-  showsDiv
-) {
+export function loadPrevious(pageNumber, shows, showsHeader, pageNum, showsDiv, body, url) {
   const previousPage = pageNumber - 1;
   if (previousPage > 0) {
     pageNum.innerHTML = previousPage;
     showsDiv.innerHTML = "";
-    displayShows(shows, previousPage, showsHeader);
+    displayShows(shows, previousPage, showsHeader, showsDiv, url, body);
   }
 }
