@@ -1,4 +1,4 @@
-//import "./style.css";
+import "./style.css";
 import { displayShows, loadNext,loadPrevious,getShowsData} from "./utilities/homePageUtilities.js";
 
 const tvApiUrl = "https://api.tvmaze.com/shows";
