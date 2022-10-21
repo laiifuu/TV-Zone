@@ -60,6 +60,6 @@ export const renderPopup = (obj) => {
   closeBtn.addEventListener('click', () => {
     container.remove();
   });
-  container.append(popupCommentWindow );
+  container.append(popupCommentWindow);
   return container;
 };

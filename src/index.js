@@ -2,7 +2,7 @@ import './style.css';
 import {
   displayShows, loadNext, loadPrevious, getShowsData,
 } from './utilities/homePageUtilities.js';
-import './utilities/burgerMenu.js'
+import './utilities/burgerMenu.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
