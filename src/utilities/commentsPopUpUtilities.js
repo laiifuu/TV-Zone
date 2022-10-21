@@ -22,6 +22,9 @@ export const renderComments = (id, comments) => {
 };
 
 export const renderPopup = (obj) => {
+  const container = document.createElement('div');
+  container.classList.add('popup-container');
+
   const popupCommentWindow = document.createElement('div');
   popupCommentWindow.classList.add('popup');
   popupCommentWindow.innerHTML = `
@@ -55,8 +58,8 @@ export const renderPopup = (obj) => {
   `;
   const closeBtn = popupCommentWindow.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
-    popupCommentWindow.remove();
+    container.remove();
   });
-
-  return popupCommentWindow;
+  container.append(popupCommentWindow );
+  return container;
 };

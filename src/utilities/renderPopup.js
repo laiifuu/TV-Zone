@@ -13,6 +13,9 @@ const getReservationsURL = 'https://us-central1-involvement-api.cloudfunctions.n
 const reservationPopup = (obj) => {
   const Popup = document.createElement('div');
   generatePopupDOM(Popup, obj);
+  const container = document.createElement('div');
+  container.classList.add('popup-container');
+  container.append(Popup);
   const closeBtn = Popup.querySelector('.close-btn');
   const reserve = Popup.querySelector('.reserve');
   const userName = Popup.querySelector('.name-input');
@@ -32,6 +35,6 @@ const reservationPopup = (obj) => {
     addNewReservation(obj.id, userName.value, dateStart.value, dateEnd.value, url);
   });
 
-  return Popup;
+  return container;
 };
 export default reservationPopup;
