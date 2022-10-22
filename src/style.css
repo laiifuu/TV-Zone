@@ -357,10 +357,12 @@ textarea {
   gap: 10px;
 }
 
-.comments-list {
+.comments-list, .reservation-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 205px;
+  overflow-y: scroll;
 }
 
 .comments-list > li,
