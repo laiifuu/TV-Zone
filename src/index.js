@@ -1,8 +1,9 @@
 import './style.css';
 import {
-  displayShows, loadNext, loadPrevious, getShowsData,
+  displayShows, loadNext, loadPrevious,
 } from './utilities/homePageUtilities.js';
 import './utilities/burgerMenu.js';
+import { getShowsData } from './utilities/fetchData.js';
 
 const tvApiUrl = 'https://api.tvmaze.com/shows';
 const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/likes';
