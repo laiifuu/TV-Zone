@@ -28,7 +28,7 @@ const reservationPopup = (obj) => {
       reservations = data;
       counter = count(data) || 0;
       renderReservations(reservations, counter);
-    }).catch((error) => console.log(error));
+    }).catch((error) => error);
 
   listener(closeBtn, 'click', () => container.remove());
   listener(reserve, 'click', () => {

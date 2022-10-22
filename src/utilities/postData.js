@@ -15,10 +15,8 @@ export const addNewReservation = (id, userName, dateStart, dateEnd, url) => {
   })
     .then((res) => res)
     .then(() => rerenderList(id, `${url}?item_id=`))
-    .catch((err) => console.log('Network Error: ', err));
+    .catch((err) =>  err);
 };
-
-export default addNewReservation;
 
 export const likeShow = async (url, id, likesNumber, likesBtn, showsArray, name) => {
   await fetch(url, {
