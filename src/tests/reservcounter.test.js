@@ -18,7 +18,7 @@ describe('Testing reservationsCounter function', () => {
     expect(count(reservations)).toBe(0);
   });
 
-  test('The list of shows should have 1 items', () => {
+  test('The list of shows should have 5 items', () => {
     add(createObj(1, 'kareem', '15-12-2022', '16-12-2022'));
     add(createObj(1, 'kareem', '15-12-2022', '16-12-2022'));
     add(createObj(2, 'kareem', '15-12-2022', '16-12-2022'));
