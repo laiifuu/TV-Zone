@@ -357,7 +357,8 @@ textarea {
   gap: 10px;
 }
 
-.comments-list, .reservation-list {
+.comments-list,
+.reservation-list {
   display: flex;
   flex-direction: column;
   gap: 10px;

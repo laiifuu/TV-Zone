@@ -15,7 +15,7 @@ export const addNewReservation = (id, userName, dateStart, dateEnd, url) => {
   })
     .then((res) => res)
     .then(() => rerenderList(id, `${url}?item_id=`))
-    .catch((err) =>  err);
+    .catch((err) => err);
 };
 
 export const likeShow = async (url, id, likesNumber, likesBtn, showsArray, name) => {

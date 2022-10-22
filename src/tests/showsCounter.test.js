@@ -17,11 +17,11 @@ div.innerHTML += `
 document.body.append(div);
 
 describe('Testing countShows function', () => {
-  test('The list of shows displayed should be from 1 to 3:', () => {
+  test('The list of shows should have 5  items:', () => {
     expect(countShows(['show1', 'show2', 'show3', 'show4', 'show5'])).toBe(5);
   });
 
-  test('The list of shows should have 0 items', () => {
+  test('The list of shows should have 0 items:', () => {
     expect(countShows([])).toBe(0);
   });
 });

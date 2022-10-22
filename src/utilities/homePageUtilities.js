@@ -57,7 +57,7 @@ export const createShowCard = (obj, body, likesURL, showsArray) => {
     });
   });
   return div;
-}
+};
 
 export const displayShows = (
   shows,
@@ -91,7 +91,7 @@ export const loadNext = (
     showsDiv.innerHTML = '';
     displayShows(shows, nextPage, showsHeader, showsDiv, likesApiURL, body);
   }
-}
+};
 
 export const loadPrevious = (
   pageNumber,
@@ -108,4 +108,4 @@ export const loadPrevious = (
     showsDiv.innerHTML = '';
     displayShows(shows, previousPage, showsHeader, showsDiv, url, body);
   }
-}
+};
