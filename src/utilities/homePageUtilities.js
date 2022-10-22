@@ -5,12 +5,7 @@ import { countShows, countDisplayedShows } from '../counterFunctions/showsCounte
 
 const url1 = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/kUJtIKt0WlDGnehZIL7s/comments';
 
-export const getShowsData = async (url) => {
-  const result = await fetch(url);
-  return result;
-};
-
-export function createShowCard(obj, body, likesURL, showsArray) {
+export const createShowCard = (obj, body, likesURL, showsArray) => {
   const div = document.createElement('div');
   div.classList.add('show-card');
   div.setAttribute('id', obj.id);
@@ -25,7 +20,7 @@ export function createShowCard(obj, body, likesURL, showsArray) {
           </div>
           <div class='like-section'>
           <button class='like-btn'><i class='fa-regular fa-heart' ></i></button>  
-          <span class='likes-number'></span>
+          <span class='likes-number'>0</span>
           </div>
         </div>
       `;
@@ -81,7 +76,7 @@ export const displayShows = (
   heading.innerHTML = `Shows: (${displayedShowsObj.firstId}, ${displayedShowsObj.lastId}) of ${showsCount}`;
 };
 
-export function loadNext(
+export const loadNext = (
   pageNumber,
   shows,
   showsHeader,
@@ -89,7 +84,7 @@ export function loadNext(
   showsDiv,
   body,
   likesApiURL,
-) {
+) => {
   const nextPage = pageNumber + 1;
   if (nextPage < 25) {
     pageNum.innerHTML = nextPage;
@@ -98,7 +93,7 @@ export function loadNext(
   }
 }
 
-export function loadPrevious(
+export const loadPrevious = (
   pageNumber,
   shows,
   showsHeader,
@@ -106,7 +101,7 @@ export function loadPrevious(
   showsDiv,
   body,
   url,
-) {
+) => {
   const previousPage = pageNumber - 1;
   if (previousPage > 0) {
     pageNum.innerHTML = previousPage;
